@@ -18,7 +18,7 @@ ARG TARGETARCH
 COPY . .
 RUN GOPATH= GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -o velero-plugin-for-csi .
 
-FROM busybox@sha256:fcd85228d7a25feb59f101ac3a955d27c80df4ad824d65f5757a954831450185 AS busybox AS busybox
+FROM busybox@sha256:fcd85228d7a25feb59f101ac3a955d27c80df4ad824d65f5757a954831450185 AS busybox
 
 FROM scratch
 
